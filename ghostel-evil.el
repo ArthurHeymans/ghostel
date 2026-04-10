@@ -169,7 +169,7 @@ escape sequence is not bound in all shell configurations."
 ;; Advice for evil editing operators
 ;; ---------------------------------------------------------------------------
 
-(defun ghostel-evil--around-delete (orig-fn beg end type register yank-handler)
+(defun ghostel-evil--around-delete (orig-fn beg end type register &optional yank-handler)
   "Intercept `evil-delete' in ghostel buffers.
 Yanks text to REGISTER, then deletes via PTY.
 Covers d, dd, D, x, X."
